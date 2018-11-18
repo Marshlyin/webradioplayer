@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Radio Player</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="webradio.js"></script>
+        <link rel="stylesheet" type="text/css" href="./RadioPlayercss - Copie.css" media="all" /> 
+    </head>
+    <body>
+        <h1>HTML RADIO PLAYER</h1>
+            <section id="corps">
+                    <p>
+                            <span id='OnAir'>
+                                ON AIR
+                            </span>                            
+                    </p>
+            <section id="listeRadio">
+                <br/> On écoute quoi ? 
+                <select onchange="selectPlayer()" id="Radio" name="Radio" size="1">
+                    <option selected="selected">Choix...</option>
+                    <optgroup label="Talk">
+                        <option value="FranceInfo">France Info</option>
+                        <option value="FranceInter">France Inter</option>
+                        <option value="FIP">FIP</option>
+                    </optgroup>
+                    <optgroup label="Musique">
+                        <option value="SCC">Salut c'est Cool</option>
+                        <option value="NWP">Night Wave Plaza</option>
+                        <option value="TSF">TSF Jazz</option>
+                        <option value="Nova">Nova</option>
+                        <option value="Mouv">Le Mouv</option>
+                        <option value="Oui">Ouï FM</option>
+                    </optgroup>
+                </select>                 
+            </section>
+            <button id=randomizer onclick="randomSource()">Je m'en branle je veux de la musique</button>
+            <section id=lecteur>        
+                <p>
+                    <audio controls="controls" preload="auto" autoplay="autoplay" id='player'>
+                        <source src='' type="audio/mp3"id="playerUniqueSource"/>
+                        Ce navigateur n'est pas compatible
+                    </audio>
+                </p>
+                <p id ="nomRadio">  </p> 
+                
+            
+        </section>
+        </section>
+    </body>
+</html>
