@@ -1,2 +1,3 @@
 -creer serveur pc pour écouter musique sur l'ordi
 - ajouter petit jeu a la con pour distraire l'odimate
+- test pour github
