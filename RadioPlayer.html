@@ -36,7 +36,7 @@
             <button id=randomizer onclick="randomSource()">Je m'en branle je veux de la musique</button>
             <section id=lecteur>        
                 <p>
-                    <audio controls="controls" preload="auto" autoplay="autoplay" id='player'>
+                    <audio controls="controls" preload="auto" autoplay="autoplay" id='player' onpause="onAir()" onplay="onAir()">
                         <source src='' type="audio/mp3"id="playerUniqueSource"/>
                         Ce navigateur n'est pas compatible
                     </audio>

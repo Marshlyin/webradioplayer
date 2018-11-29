@@ -1,4 +1,5 @@
 function selectPlayer(){
+    
     var selection = document.getElementById('Radio');
     var valeur = selection.value;
     var source = document.getElementById('playerUniqueSource');
@@ -59,7 +60,6 @@ function selectPlayer(){
 
     player.load();
     player.play();
-    onAir();
 }
 
 function randomSource(){
@@ -122,13 +122,21 @@ function randomSource(){
     }
 
     player.load();
-    player.play();   
-    onAir(); 
+    player.play();
 
 }
 
+
 function onAir(){
-    var live = document.getElementById('OnAir');
-    live.style.color = '#f70000';
-    live.style.backgroundColor = '#000000'; 
+
+    var player = document.getElementById('player');
+    var onAir = document.getElementById('OnAir');
+    var status = !player.paused;
+    if (status) {
+        onAir.style.color = '#f70000';
+    }
+    else{
+        onAir.style.color = 'grey'; 
+    }
+    
 }
